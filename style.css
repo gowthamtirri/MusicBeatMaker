@@ -1,0 +1,144 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+i,
+svg {
+  pointer-events: none;
+}
+.kick-pad,
+.snare-pad,
+.hihat-pad {
+  width: 5rem;
+  height: 5rem;
+  margin: 1rem 0.5rem;
+  cursor: pointer;
+}
+.kick-pad {
+  background-color: rgb(171, 241, 241);
+}
+.snare-pad {
+  background-color: rgb(241, 171, 241);
+}
+.hihat-pad {
+  background-color: rgb(241, 236, 171);
+}
+
+/*  When Active */
+.kick-pad.active {
+  background-color: rgb(30, 212, 212);
+}
+.snare-pad.active {
+  background-color: rgb(230, 48, 230);
+}
+.hihat-pad.active {
+  background-color: rgb(235, 223, 57);
+}
+.sequencer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 100vh;
+  justify-content: center;
+}
+.kick-track,
+.snare-track,
+.hihat-track {
+  display: flex;
+  width: 70%;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 6rem;
+}
+.kick,
+.snare,
+.hihat {
+  display: flex;
+}
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  margin: 0px 2rem;
+}
+
+.controls button {
+  padding: 1rem;
+  background-color: rgb(80, 80, 80);
+  color: white;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.pad {
+  transition: all 0.5s ease;
+}
+
+select {
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+button {
+  outline: none;
+}
+.mute.active {
+  background: gray;
+}
+.play {
+  padding: 1rem 2rem;
+  background-color: rgb(80, 80, 80);
+  color: white;
+  border: none;
+  margin-top: 3rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.tempo {
+  margin: 3rem;
+  width: 30%;
+}
+.tempo p {
+  font-size: 1.5rem;
+  margin: 2rem;
+  text-align: center;
+}
+.tempo-slider {
+  padding: 0.2rem;
+  -webkit-appearance: none;
+  margin: 1rem 0rem;
+  width: 100%;
+  position: relative;
+  background-color: rgb(187, 250, 201);
+  cursor: pointer;
+  border-radius: 1rem;
+}
+footer {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-bottom: 60px;
+}
+@keyframes playTrack {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.2);
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .kick-track {
+    display: flex;
+    flex-direction: row;
+  }
+}
